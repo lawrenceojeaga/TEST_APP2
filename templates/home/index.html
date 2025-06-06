@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="{{ url_for('static', filename='scripts/main.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+</head>
+<body>
+    {% include 'partials/header.html' %}
+    <main>
+        <section class="hero-section">
+            <h1>Welcome to Our Store</h1>
+            <div id="info_section">
+                <a href="/view_items">View Products</a>
+                <p>Explore our wide range of products and find what you love!</p>
+            </div>
+
+        </section>
+ 
+        <div>
+            <section>
+                <h2 class="feature_name">Featured Products</h2>
+                <div class="product-list">
+                    <!-- Example product item -->
+                    <div class="product-item">
+                        <img src="{{ url_for('static', filename='images/image01.jpg') }}" alt="Product Image">
+                        <h3>Product Name</h3>
+                        <p>Description of the product.</p>
+                        <span>$Price</span>
+                        <button>Add to Cart</button>
+                    </div>
+
+                    <div class="product-item">
+                        <img src="{{ url_for('static', filename='images/image01.jpg') }}" alt="Product Image">
+                        <h3>Product Name</h3>
+                        <p>Description of the product.</p>
+                        <span>$Price</span>
+                        <button>Add to Cart</button>
+                    </div>
+
+                    <div class="product-item">
+                        <img src="{{ url_for('static', filename='images/image01.jpg') }}" alt="Product Image">
+                        <h3>Product Name</h3>
+                        <p>Description of the product.</p>
+                        <span>$Price</span>
+                        <button>Add to Cart</button>
+                    </div>
+
+                    <div class="product-item">
+                        <img src="{{ url_for('static', filename='images/image01.jpg') }}" alt="Product Image">
+                        <h3>Product Name</h3>
+                        <p>Description of the product.</p>
+                        <span>$Price</span>
+                        <button>Add to Cart</button>
+                    </div>
+                    <!-- Repeat for more products -->
+                </div>
+            </section>
+    
+            <section class="news-section">
+                <div class="all_news">
+                    <article>
+                        <h3>News Title</h3>
+                        <p>Brief description of the news article.</p>
+                        <a href="/news/article-link">Read more</a>
+                    </article>
+
+                    <article>
+                        <h3>News Title</h3>
+                        <p>Brief description of the news article.</p>
+                        <a href="/news/article-link">Read more</a>
+                    </article>
+
+                    <article>
+                        <h3>News Title</h3>
+                        <p>Brief description of the news article.</p>
+                        <a href="/news/article-link">Read more</a>
+                    </article>
+
+                    <article>
+                        <h3>News Title</h3>
+                        <p>Brief description of the news article.</p>
+                        <a href="/news/article-link">Read more</a>
+                    </article>
+                </div>
+                <h2>Latest News</h2>
+                <!-- Repeat for more news articles -->
+            </section>
+        </div>
+    </main>
+{% include 'partials/footer.html' %}
+
+</body>
+</html>
