@@ -1,13 +1,19 @@
 <nav class="navbar">
-        <div>logo</div>
+    <div>logo</div>
 
-        <div class="hamburger" onclick="toggleMenu()">
+    <div class="hamburger" onclick="toggleMenu()">
         &#9776;
-        </div>
+    </div>
 
-        <ul class="nav-links" id="navLinks">
-        <a href="/home"><li>home</li></a>
-        <a href="/login"><li>login</li></a>
-        <a href="/viiew_items"><li>Our products</li></a>
-        </ul>
-    </nav>
+    <ul class="nav-links" id="navLinks">
+        <a href="/"><li>Home</li></a>
+
+        {% if current_user.is_authenticated %}
+            <a href="/logout"><li>Logout</li></a>
+        {% else %}
+            <a href="/login"><li>Login</li></a>
+        {% endif %}
+
+        <a href="/view_items"><li>Our Products</li></a>
+    </ul>
+</nav>
